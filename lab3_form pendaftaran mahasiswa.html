@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form p > label {
+            display: inline-block;
+            width: 120px;
+        }
+        form input[type="text"], form textarea, select {
+            border: 1px solid #197a43;
+            padding: 5px;
+        }
+        form input[type="submit"] {
+            border: 1px solid #197a43;
+            background-color: #197a43;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #145a32;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form Pendaftaran</h1>
+    </header>
+
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            
+            <!-- Input Nama -->
+            <p>
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+            </p>
+
+            <!-- Dropdown (Select) -->
+            <p>
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan" name="jurusan">
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="ar">Arsitektur</option>
+                    <option value="ts">Teknik Sipil</option>
+                    <option value="ie">Teknik Industri</option>
+                    <option value="ti">Teknik Informatika</option>
+                    <option value="tl">Teknik Lingkungan</option>
+                    <option value="tp">Teknologi Hasil Pertanian</option>
+                    <option value="mm">Manajemen</option>
+                    <option value="bd">Bisnis Digital</option>
+                    <option value="kn">Kewirausahaan</option>
+                    <option value="es">Ekonomi Syariah</option>
+                    <option value="ai">Akutansi</option>
+                    <option value="pgsd">Pendidikan Guru Sekolah Dasar</option>
+                    <option value="pgpaud">Pendidikan Guru Pendidikan Anak Usia Dini</option>
+                    <option value="bkpi">Bimbingan Dan Konseling Pendidikan Islam</option>
+                    <option value="hm">Hukum</option>
+                </select>
+            </p>
+
+            <!-- Listbox Multiple Selection -->
+            <p>
+                <label for="hobi">Hobi</label>
+                <select id="hobi" name="hobi[]" multiple size="4">
+                    <option value="membaca">Membaca</option>
+                    <option value="olahraga">Olahraga</option>
+                    <option value="musik">Musik</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="traveling">Traveling</option>
+                </select>
+            </p>
+
+            <!-- Tombol Submit -->
+            <p>
+                <input type="submit" value="Kirim Data">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
